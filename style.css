@@ -1,52 +1,56 @@
 * {
     box-sizing: border-box;
 }
-main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.border {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-[class*="box-"]{
+[class*="square"] {
     width: 100px;
     height: 100px;
-    background-color: aquamarine;
+    background-color: beige;
     margin: 10px;
-    border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 10%;
+    display: flex;
 }
-.circl {
+.cirlce {
     width: 20px;
     height: 20px;
-    background-color: black;
     border-radius: 50%;
+    background-color: gray;
+    margin: 3px;
 }
-.box-1 {
+body {
     display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+.first-square {
     justify-content: center;
     align-items: center;
 }
-.box-2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
+.second-square {
+    justify-content: space-between;
 }
-.box-3 {
-    display: flex;
+.third-square {
+    justify-content: space-between;
 }
-.box-4 {
-    display: flex;
+.fourth-squar,
+.sixth-square{
+    justify-content: space-between;
 }
-.box-5 {
-    display: flex;
+.second-square .cirlce:last-child, 
+.third-square .cirlce:last-child {
+    align-self: flex-end;
 }
-.box-6 {
-    display: flex;
+.third-square .cirlce:nth-child(2) {
+    align-self: center;
 }
+.fourth-squar .col, 
+.fifth-square .col,
+.sixth-square .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
